@@ -12,7 +12,7 @@ pipeline {
     tools {
         maven 'M2_HOME'
     }
-
+}
     stages {
         
        stage('build') {
@@ -23,6 +23,7 @@ pipeline {
                 sh 'mvn package'
             }
         }
+    }
         stage('test') {
             steps {
                 sh 'mvn test'
@@ -40,7 +41,4 @@ pipeline {
     }
         
     }
-}
-    }
-}
-      }
+        }
