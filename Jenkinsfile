@@ -1,7 +1,4 @@
-triggers {
-        pollSCM '* * * * *'
-    }
-
+triggers { pollSCM('* * * * *') }
 
 pipeline {
     agent any
