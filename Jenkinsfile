@@ -26,7 +26,9 @@ pipeline {
           checkout scm
           docker.withRegistry('', 'DockerRegistryID') {
           def customImage = docker.build("wuliokenfack/hol-pipeline:${env.BUILD_ID}")
+          def customImage1 = docker.build("wuliokenfack/hol-pipeline")
           customImage.push()
+          customImage1.push()
           }
     }
         
