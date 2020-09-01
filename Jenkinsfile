@@ -4,8 +4,9 @@ pipeline {
         maven 'M2_HOME'
     }
     triggers {
-  pollSCM '* * * * *'
+  pollSCM ignorePostCommitHooks: true, scmpoll_spec: '* * * * *'
 }
+
 
 
     stages {
