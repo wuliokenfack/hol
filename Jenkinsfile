@@ -1,6 +1,6 @@
 triggers {
-  pollSCM '* * * * *'
-}
+        pollSCM '* * * * *'
+    }
 
 
 pipeline {
